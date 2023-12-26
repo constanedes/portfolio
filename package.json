@@ -1,17 +1,45 @@
 {
-  "name": "portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.3.4",
-    "astro": "^4.0.7",
-    "typescript": "^5.3.3"
-  }
+    "name": "portfolio",
+    "version": "0.0.1",
+    "description": "Personal portfolio",
+    "keywords": [
+        "portfolio",
+        "personal",
+        "programmer"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/constanedes/portfolio.git"
+    },
+    "license": "GNU GPLv3",
+    "author": {
+        "name": "Constantino Edes",
+        "email": "constantinoedes@gmail.com",
+        "url": "https://www.constantinoedes.dev"
+    },
+    "type": "module",
+    "scripts": {
+        "astro": "astro",
+        "build": "astro check && astro build",
+        "dev": "astro dev",
+        "preview": "astro preview",
+        "start": "astro dev",
+        "prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
+        "format": "prettier --write --plugin-search-dir=. .",
+        "lint:scss": "stylelint \"src/**/*.{astro,scss,svelte}\"",
+        "prettier:check": "prettier --check --plugin-search-dir=. ."
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.3.4",
+        "astro": "^4.0.7",
+        "sass": "^1.69.5",
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "eslint": "8.56.0",
+        "prettier": "3.1.1",
+        "stylelint": "^16.1.0",
+        "stylelint-config-recommended-scss": "^14.0.0",
+        "stylelint-config-standard": "^36.0.0"
+    }
 }
