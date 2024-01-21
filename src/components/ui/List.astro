@@ -1,0 +1,18 @@
+---
+interface Props<T> {
+    isOrdered: boolean;
+    elementsQuantity: number;
+    childrenNodeType: T;
+}
+---
+
+<ul>
+</ul>
+
+<script>
+    if (Astro.props.isOrdered) {
+        const list = document.querySelector("ul") as HTMLUListElement;
+        const orderedList = document.createElement("ol");
+        list.replaceWith(orderedList);
+    }
+</script>

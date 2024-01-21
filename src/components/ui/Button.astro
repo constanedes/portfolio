@@ -1,0 +1,21 @@
+---
+interface Props {
+    innerText: string;
+    click: () => any;
+}
+
+const { innerText } = Astro.props;
+---
+
+<button>{innerText}</button>
+
+
+<script>
+    // Encuentra el botón dentro del contexto de este componente Astro.
+    const componentButton = document.querySelector("button");
+    const { click } = Astro.props;
+    // Maneja el clic en el botón si la función click está presente.
+    if (componentButton && Astro.props.click) {
+        componentButton.addEventListener("click", click);
+    }
+</script>

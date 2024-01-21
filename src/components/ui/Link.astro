@@ -1,0 +1,11 @@
+---
+interface Props {
+    href: string;
+    innerText: string;
+    target?: "_blank" | "_parent" | "_self" | "_top"
+}
+
+const { href, innerText, target } = Astro.props;
+---
+
+<a href={href} target={target}>{innerText}</a>

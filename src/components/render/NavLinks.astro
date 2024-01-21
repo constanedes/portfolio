@@ -1,0 +1,25 @@
+---
+import Link from "./../ui/Link.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const hrefs = {
+    "#home": t("nav.home"),
+    "#about": t('nav.about'),
+    "#skills": t('nav.skills'),
+    "#qualification": t('nav.qualification'),
+    "#services": t('nav.services'),
+    "#portfolio": t('nav.portfolio'),
+    "#contact": t('nav.contact')
+};
+---
+
+<ul>
+    {
+        Object.entries(hrefs).map(([key, value]) => (
+            <li>
+                <Link href={key} innerText={value} />
+            </li>
+        ))
+    }
+</ul>
