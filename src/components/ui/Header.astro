@@ -1,11 +1,22 @@
 ---
-import Nav from "./Nav.astro";
+import LanguagePicker from "@components/render/LanguagePicker.astro";
+import ThemeToggler from "@components/render/ThemeToggler.astro";
+import NavLinks from "../render/NavLinks.astro";
+import Link from "./Link.astro";
 ---
 
 <header>
-    <Nav />
+    
+    <nav class="navbar">
+        <div class="logo">
+            <Link href={'/'} innerText="Logo" >
+        </div>
+        <NavLinks/>
+    </nav>
+    <br>
+    <LanguagePicker/>
+    <ThemeToggler />
+    <br>
 </header>
 
-<style>
-    
-</style>
+

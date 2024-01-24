@@ -17,6 +17,7 @@ export const ui = {
         "nav.services": "Services",
         "nav.portfolio": "Portfolio",
         "nav.contact": "Contact",
+        "hero.title": "Hi, I'm Constantino Edes",
     },
     es: {
         "nav.home": "Inicio",
@@ -26,5 +27,6 @@ export const ui = {
         "nav.services": "Servicios",
         "nav.portfolio": "Portafolio",
         "nav.contact": "Contacto",
+        "hero.title": "Hola, soy Constantino Edes",
     },
 } as const;
