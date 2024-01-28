@@ -26,23 +26,20 @@
         "start": "astro dev",
         "prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
         "format": "prettier --write ./src",
-        "lint:scss": "stylelint \"src/**/*.{astro,scss,svelte}\"",
         "prettier:check": "prettier --check --plugin-search-dir=. ."
     },
     "dependencies": {
-        "@astrojs/check": "^0.3.4",
-        "astro": "^4.0.7",
-        "sass": "^1.69.5",
-        "typescript": "^5.3.3"
+        "@astrojs/check": "0.3.4",
+        "astro": "4.0.7",
+        "sass": "1.69.5",
+        "typescript": "5.3.3"
     },
     "devDependencies": {
         "eslint": "8.56.0",
         "prettier": "3.1.1",
-        "stylelint": "^16.1.0",
-        "stylelint-config-recommended-scss": "^14.0.0",
-        "stylelint-config-standard": "^36.0.0"
+        "stylelint": "16.1.0"
     },
     "engines": {
-        "node": ">=18.0.0"
+        "node": ">=20.11.0"
     }
 }
