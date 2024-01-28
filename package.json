@@ -25,7 +25,7 @@
         "preview": "astro preview",
         "start": "astro dev",
         "prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
-        "format": "prettier --write src --plugin-search-dir=. .",
+        "format": "prettier --write ./src",
         "lint:scss": "stylelint \"src/**/*.{astro,scss,svelte}\"",
         "prettier:check": "prettier --check --plugin-search-dir=. ."
     },
