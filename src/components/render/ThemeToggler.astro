@@ -54,14 +54,9 @@
         setTheme(newTheme);
     };
 
-    // Function to handle the theme toggle button click
-    const handleToggleClick = () => {
-        toggleTheme();
-    };
-
     // Add an event listener to the theme toggle button
     const toggler = document.getElementById("themeToggle");
-    if (toggler) toggler.addEventListener("click", handleToggleClick);
+    if (toggler) toggler.addEventListener("click", toggleTheme);
 
     // Set the initial theme based on user preference
     document.addEventListener("astro:page-load", () => {
