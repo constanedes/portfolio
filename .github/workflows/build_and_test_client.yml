@@ -1,0 +1,38 @@
+name: Build and deploy test client
+
+on:
+    push:
+        branches:
+            - development
+
+env:
+    node-version: 20.11
+
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 2
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: Use Node.js ${{ env.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.node-version }}
+                  cache: "pnpm"
+            - name: Install dependencies
+              run: pnpm install --no-optional
+            - name: Build
+              run: pnpm run build
+                
+    test: 
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Lint
+              run: pnpm run lint
+            - name: Test 
+              run: pnpm run test
+
