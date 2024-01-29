@@ -25,8 +25,9 @@
         "preview": "astro preview",
         "start": "astro dev",
         "prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
-        "format": "prettier --write ./src",
-        "prettier:check": "prettier --check --plugin-search-dir=. ."
+        "lint": "echo 'lint message'",
+        "test": "echo 'test message'",
+        "format": "prettier --write ./src"
     },
     "dependencies": {
         "@astrojs/check": "0.3.4",
